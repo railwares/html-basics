@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сторінка контактів. Заповніть форму зворотного зв'язку, щоб написати мені.">
+  <title>Контакти - Мій перший HTML-сайт</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Головна</a> |
+      <a href="./about.html">Про мене</a> |
+      <a href="./contact.html">Контакти</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Зв'яжіться зі мною</h1>
+
+    <form action="./submit.html" method="get">
+      
+      <p>
+        <label for="name">Ім'я (обов'язково):</label><br>
+        <input id="name" name="name" type="text" required minlength="2" maxlength="30" placeholder="Ваше ім'я">
+      </p>
+
+      <p>
+        <label for="email">Email (обов'язково):</label><br>
+        <input id="email" name="email" type="email" required placeholder="example@mail.com">
+      </p>
+
+      <p>
+        <label for="phone">Телефон (за бажанням):</label><br>
+        <input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="050-123-4567">
+        <small><em>Формат: 050-123-4567</em></small>
+      </p>
+
+      <p>
+        <label for="topic">Тема звернення:</label><br>
+        <select id="topic" name="topic">
+          <option value="study">Навчання та питання</option>
+          <option value="work">Пропозиція співпраці</option>
+          <option value="feedback">Відгук про сайт</option>
+          <option value="other">Інше</option>
+        </select>
+      </p>
+
+      <fieldset>
+        <legend>Зручний спосіб зв'язку</legend>
+        <label>
+          <input type="radio" name="contactWay" value="email" checked> Email
+        </label><br>
+        <label>
+          <input type="radio" name="contactWay" value="phone"> Телефон
+        </label>
+      </fieldset>
+
+      <p>
+        <label for="message">Повідомлення:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40" required minlength="10" placeholder="Напишіть ваше повідомлення тут..."></textarea>
+      </p>
+
+      <p>
+        <label>
+          <input type="checkbox" name="agree" required>
+          Я погоджуюсь на обробку моїх даних згідно з правилами.
+        </label>
+      </p>
+
+      <p>
+        <button type="submit">Надіслати</button>
+        <button type="reset">Очистити форму</button>
+      </p>
+
+    </form>
+  </main>
+
+</body>
+</html>
