@@ -1,0 +1,243 @@
+/* =========================================
+   1. ЗМІННІ ТА БАЗОВІ НАЛАШТУВАННЯ (Дизайн-система)
+   ========================================= */
+:root {
+  --color-primary: #52005e; /* Основний колір */
+  --color-accent: #ffffff;  /* Акцентний колір */
+  --color-bg: #f7f9fc;      /* Колір тла сайту */
+  --color-surface: #ffffff; /* Колір карток */
+  --color-text: #1f2937;    /* Колір тексту */
+  --color-border: #d9e2ec;  /* Колір ліній/меж */
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box; /* Глобальний box-sizing */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg); 
+}
+
+/* =========================================
+   2. СТРУКТУРА ТА ЛЕЙАУТ
+   ========================================= */
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto; /* Центрування */
+}
+
+.main-content {
+  padding: 40px 0;
+  min-height: 60vh;
+}
+
+/* Універсальна картка контенту */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Flexbox сітка для медіа елементів */
+.media-grid {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.media-card {
+  flex: 1; /* Рівномірний розподіл ширини */
+}
+
+/* =========================================
+   3. ШАПКА, НАВІГАЦІЯ ТА ПІДВАЛ
+   ========================================= */
+.site-header {
+  background-color: var(--color-primary);
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Відокремлення від контенту */
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Горизонтальне меню через Flexbox */
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav-list a {
+  text-decoration: none; /* Прибрано підкреслення */
+  color: #e2e8f0;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+/* Стани наведення та активної сторінки */
+.nav-list a:hover,
+.nav-list a.active {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.site-footer {
+  background-color: #111827; /* Інший фон для футера */
+  color: #9ca3af;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem; /* Дрібніший шрифт */
+  margin-top: 40px;
+}
+
+/* =========================================
+   4. ТИПОГРАФІЯ ТА КОНТЕНТ
+   ========================================= */
+h1, h2, h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+h1 { font-size: 2.2rem; margin-bottom: 20px; }
+h2 { font-size: 1.5rem; border-bottom: 2px solid var(--color-border); padding-bottom: 8px; }
+
+.styled-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.styled-list li {
+  margin-bottom: 10px; /* Міжрядкові інтервали списків */
+}
+
+.text-center { text-align: center; }
+
+/* Зображення та медіа [cite: 25, 31] */
+.responsive-img, .responsive-video, .responsive-audio {
+  max-width: 100%; /* Адаптивність */
+  height: auto;
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+.responsive-img {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Тінь для зображень */
+}
+.media-caption {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 10px; /* Стилізація підписів */
+}
+
+/* =========================================
+   5. ТАБЛИЦЯ
+   ========================================= */
+.table-wrapper {
+  overflow-x: auto; /* Щоб таблиця не виходила за межі на мобільних */
+}
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.styled-table caption {
+  font-weight: bold;
+  margin-bottom: 10px; /* Підпис таблиці */
+}
+.styled-table th, .styled-table td {
+  padding: 12px 15px; /* Відступи в комірках */
+  border: 1px solid var(--color-border); /* Рамки таблиці */
+  text-align: left;
+}
+.styled-table th {
+  background-color: var(--color-primary); /* Контрастний заголовок */
+  color: white;
+}
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f4f6; /* Чергування кольору рядків */
+}
+
+/* =========================================
+   6. ФОРМА КОНТАКТІВ
+   ========================================= */
+.form-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+fieldset.form-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 15px;
+}
+fieldset legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+.radio-label {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+/* Стилізація полів вводу */
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: #fff;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+/* Фокус полів та валідація */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(29, 78, 137, 0.15);
+}
+input:valid {
+  border-left: 4px solid #10b981; /* Зелена лінія для заповнених правильних полів */
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Кнопка */
+.btn-primary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+.btn-primary:hover {
+  background-color: #153e70; /* Hover стан */
+}

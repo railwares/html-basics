@@ -5,76 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Сторінка контактів. Заповніть форму зворотного зв'язку, щоб написати мені.">
   <title>Контакти - Мій перший HTML-сайт</title>
+  
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html">Головна</a> |
-      <a href="./about.html">Про мене</a> |
-      <a href="./contact.html">Контакти</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="./about.html">Про мене</a></li>
+          <li><a href="./contact.html" class="active">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Зв'яжіться зі мною</h1>
+  <main class="container main-content">
+    <section class="card form-section">
+      <h1>Зв'яжіться зі мною</h1>
 
-    <form action="./submit.html" method="get">
-      
-      <p>
-        <label for="name">Ім'я (обов'язково):</label><br>
-        <input id="name" name="name" type="text" required minlength="2" maxlength="30" placeholder="Ваше ім'я">
-      </p>
+      <form action="./submit.html" method="get" class="contact-form">
+        
+        <div class="form-group">
+          <label for="name">Ім'я (обов'язково):</label>
+          <input id="name" name="name" type="text" required minlength="2" maxlength="30" placeholder="Ваше ім'я">
+        </div>
 
-      <p>
-        <label for="email">Email (обов'язково):</label><br>
-        <input id="email" name="email" type="email" required placeholder="example@mail.com">
-      </p>
+        <div class="form-group">
+          <label for="email">Email (обов'язково):</label>
+          <input id="email" name="email" type="email" required placeholder="example@mail.com">
+        </div>
 
-      <p>
-        <label for="phone">Телефон (за бажанням):</label><br>
-        <input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="050-123-4567">
-        <small><em>Формат: 050-123-4567</em></small>
-      </p>
+        <div class="form-group">
+          <label for="phone">Телефон (за бажанням):</label>
+          <input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="050-123-4567">
+          <small><em>Формат: 050-123-4567</em></small>
+        </div>
 
-      <p>
-        <label for="topic">Тема звернення:</label><br>
-        <select id="topic" name="topic">
-          <option value="study">Навчання та питання</option>
-          <option value="work">Пропозиція співпраці</option>
-          <option value="feedback">Відгук про сайт</option>
-          <option value="other">Інше</option>
-        </select>
-      </p>
+        <div class="form-group">
+          <label for="topic">Тема звернення:</label>
+          <select id="topic" name="topic">
+            <option value="study">Навчання та питання</option>
+            <option value="work">Пропозиція співпраці</option>
+            <option value="feedback">Відгук про сайт</option>
+            <option value="other">Інше</option>
+          </select>
+        </div>
 
-      <fieldset>
-        <legend>Зручний спосіб зв'язку</legend>
-        <label>
-          <input type="radio" name="contactWay" value="email" checked> Email
-        </label><br>
-        <label>
-          <input type="radio" name="contactWay" value="phone"> Телефон
-        </label>
-      </fieldset>
+        <fieldset class="form-group">
+          <legend>Зручний спосіб зв'язку</legend>
+          <label class="radio-label">
+            <input type="radio" name="contactWay" value="email" checked> Email
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="contactWay" value="phone"> Телефон
+          </label>
+        </fieldset>
 
-      <p>
-        <label for="message">Повідомлення:</label><br>
-        <textarea id="message" name="message" rows="5" cols="40" required minlength="10" placeholder="Напишіть ваше повідомлення тут..."></textarea>
-      </p>
+        <div class="form-group">
+          <label for="message">Повідомлення:</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Напишіть ваше повідомлення тут..."></textarea>
+        </div>
 
-      <p>
-        <label>
-          <input type="checkbox" name="agree" required>
-          Я погоджуюсь на обробку моїх даних згідно з правилами.
-        </label>
-      </p>
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" name="agree" required>
+            Я погоджуюсь на обробку моїх даних згідно з правилами.
+          </label>
+        </div>
 
-      <p>
-        <button type="submit">Надіслати</button>
-        <button type="reset">Очистити форму</button>
-      </p>
+        <div class="form-group">
+          <button type="submit" class="btn-primary">Надіслати</button>
+          <button type="reset" style="margin-top: 10px; width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #d9e2ec; background: transparent; cursor: pointer;">Очистити форму</button>
+        </div>
 
-    </form>
+      </form>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Завадський М.Р.</p>
+    </div>
+  </footer>
 </body>
 </html>

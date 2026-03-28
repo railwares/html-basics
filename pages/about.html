@@ -4,39 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Про мене - Мій перший HTML-сайт</title>
+  
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html">Головна</a> |
-      <a href="./about.html">Про мене</a> |
-      <a href="./contact.html">Контакти</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="./about.html" class="active">Про мене</a></li>
+          <li><a href="./contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Про мене</h1>
-    <p>Нижче ви можете переглянути відео та послухати цікавий аудіотрек. Це також практика роботи з медіатегами в HTML5!</p>
+  <main class="container main-content">
+    <section class="card">
+      <h1>Про мене</h1>
+      <p>Нижче ви можете переглянути відео та послухати цікавий аудіотрек. Це також практика роботи з медіатегами в HTML5!</p>
+    </section>
 
-    <h2>Розпускання квітки</h2>
-    <p>Це коротке відео демонструє красу природи у прискореній зйомці. Зверніть увагу на панель керування внизу відео (відтворення, гучність, на весь екран).</p>
-    
-    <video controls width="480">
-      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
-      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    <div class="media-grid">
       
-      <p>Ваш браузер не підтримує HTML-відео. 
-         <a href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Завантажити відео (MP4)</a>.
-      </p>
-    </video>
-    
-    <h2>Музичний трек для тестування</h2>
-    <audio controls>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    <p>Ваш браузер не підтримує цей аудіофайл. 
-    <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Завантажити музику</a>.
-    </p>
-</audio>
+      <section class="card media-card">
+        <h2>Розпускання квітки</h2>
+        <p class="media-caption">Це коротке відео демонструє красу природи у прискореній зйомці. Зверніть увагу на панель керування внизу відео (відтворення, гучність, на весь екран).</p>
+        
+        <video controls class="responsive-video">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          <p>Ваш браузер не підтримує HTML-відео. 
+             <a href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Завантажити відео (MP4)</a>.
+          </p>
+        </video>
+      </section>
+      
+      <section class="card media-card">
+        <h2>Музичний трек для тестування</h2>
+        <p class="media-caption">Заспокійлива фонова музика для концентрації.</p>
+        
+        <audio controls class="responsive-audio">
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          <p>Ваш браузер не підтримує цей аудіофайл. 
+          <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Завантажити музику</a>.
+          </p>
+        </audio>
+      </section>
+
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Завадський М.Р.</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,37 @@
+/* 
+   АДАПТИВНІСТЬ ДЛЯ ПЛАНШЕТІВ ТА МОБІЛЬНИХ
+   Максимальна ширина: 768px 
+*/
+
+@media (max-width: 768px) {
+  
+  /* Зменшення ширини контейнера */
+  .container {
+    width: min(100% - 20px, 1100px); 
+  }
+
+  /* Перебудова меню у вертикальний список */
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .nav-list a {
+    display: block; /* Щоб на мобільному зона кліку була більшою */
+  }
+
+  /* Зменшення відступів у картках */
+  .card {
+    padding: 20px 15px;
+  }
+
+  /* Перебудова двох колонок у сторінці "Про мене" */
+  .media-grid {
+    flex-direction: column;
+  }
+  
+  /* Зменшення заголовків */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+}
