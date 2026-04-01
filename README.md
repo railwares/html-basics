@@ -4,8 +4,8 @@
 
 ![Скріншоти головної сторінки](https://github.com/railwares/html-basics/blob/main/assets/img/csspagepc.png?raw=true)
 ![Скріншоти головної сторінки (мобільна сторінка)](https://github.com/railwares/html-basics/blob/main/assets/img/csspagemobile.png?raw=true)
-![Скріншоти сторінки "про мене"](https://github.com/railwares/html-basics/blob/main/assets/img/csspagepc.png?raw=true)
-![Скріншоти сторінки зв'язку](https://github.com/railwares/html-basics/blob/main/assets/img/csspagepc.png?raw=true)
+![Скріншоти сторінки "про мене"](https://github.com/railwares/html-basics/blob/main/assets/img/css5-6.2.png?raw=true)
+![Скріншоти сторінки зв'язку](https://github.com/railwares/html-basics/blob/main/assets/img/css5-6.3.png?raw=true)
 ## Що реалізовано
 
 Проєкт складається з трьох взаємопов'язаних сторінок, об'єднаних спільним навігаційним меню.
