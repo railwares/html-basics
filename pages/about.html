@@ -4,22 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Про мене - Мій перший HTML-сайт</title>
-  
+  <script src="../js/main.js" defer></script>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <nav>
-        <ul class="nav-list">
-          <li><a href="../index.html">Головна</a></li>
-          <li><a href="./about.html" class="active">Про мене</a></li>
-          <li><a href="./contact.html">Контакти</a></li>
-        </ul>
-      </nav>
+<header class="site-header">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    
+    <div class="header-controls">
+      <button class="theme-toggle" aria-label="Перемикач теми">🌙 Тема</button>
+      <button class="burger-btn" aria-expanded="false" aria-label="Меню навігації">☰</button>
     </div>
-  </header>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="../index.html" class="active">Головна</a></li>
+        <li><a href="./about.html">Про мене</a></li>
+        <li><a href="./contact.html">Контакти</a></li>
+      </ul>
+    </nav>
+    
+  </div>
+</header>
 
   <main class="container main-content">
     <section class="card">
@@ -57,10 +64,12 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Завадський М.Р.</p>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span class="current-year">2026</span> Завадський М.Р.</p>
+  </div>
+  
+  <button class="back-to-top hidden" aria-label="Повернутися вгору">↑</button>
+</footer>
 </body>
 </html>

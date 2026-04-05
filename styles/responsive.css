@@ -5,6 +5,10 @@
 
 @media (max-width: 768px) {
   
+  .burger-btn { display: block; }
+  .nav-list { display: none; } 
+  .nav-list.is-open { display: flex; } 
+
   /* Зменшення ширини контейнера */
   .container {
     width: min(100% - 20px, 1100px); 

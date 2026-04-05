@@ -5,22 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Це моя перша веб-сторінка, створена для вивчення основ HTML5. Тут я ділюся своїм розкладом навчання та планами на майбутнє.">
   <title>Мій перший HTML-сайт</title>
-  
+  <script src="./js/main.js" defer></script>
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/responsive.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <nav>
-        <ul class="nav-list">
-          <li><a href="./index.html" class="active">Головна</a></li>
-          <li><a href="./pages/about.html">Про мене</a></li>
-          <li><a href="./pages/contact.html">Контакти</a></li>
-        </ul>
-      </nav>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    
+    <div class="header-controls">
+      <button class="theme-toggle" aria-label="Перемикач теми">🌙 Тема</button>
+      <button class="burger-btn" aria-expanded="false" aria-label="Меню навігації">☰</button>
     </div>
-  </header>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="./index.html" class="active">Головна</a></li>
+        <li><a href="./pages/about.html">Про мене</a></li>
+        <li><a href="./pages/contact.html">Контакти</a></li>
+      </ul>
+    </nav>
+    
+  </div>
+</header>
 
   <main class="container main-content">
     
@@ -40,16 +47,18 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h2>Етапи створення цього сайту</h2>
-      <p>Будь-який якісний проект потребує чіткого планування. Щоб зробити цей сайт, я виконав такі кроки:</p>
-      <ol class="styled-list">
-        <li>Створив базовий каркас сторінки та налаштував метатеги.</li>
-        <li>Додав семантичні теги для розмітки шапки, основної частини та підвалу.</li>
-        <li>Наповнив сторінку текстом, додав форматування та списки.</li>
-        <li>Інтегрував медіа-контент та табличні дані.</li>
-      </ol>
-    </section>
+<h2>Етапи створення цього сайту</h2>
+      
+      <div class="accordion-header">Етап 1: Розмітка</div>
+      <div class="accordion-content hidden">
+        <p>Створив базовий каркас сторінки та налаштував метатеги.</p>
+      </div>
+      
+      <div class="accordion-header">Етап 2: Стилізація</div>
+      <div class="accordion-content hidden">
+        <p>Додав семантичні теги та підключив зовнішній файл CSS.</p>
+      </div>
+      </section>
 
     <section class="card text-center">
       <h2>Моє натхнення</h2>
@@ -59,9 +68,10 @@
         <figcaption class="media-caption">Рис. 1 - Я, після роботи з кодом</figcaption>
       </figure>
     </section>
-
+    
     <section class="card table-wrapper">
       <h2>Розклад навчання</h2>
+      <input type="text" id="table-search" placeholder="Пошук по таблиці..." style="margin-bottom:15px; padding:8px; width:100%;">
       <table class="styled-table">
         <caption>Мій графік занять на тиждень</caption>
         <thead>
@@ -93,10 +103,18 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Завадський М.Р.</p>
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span class="current-year">2026</span> Завадський М.Р.</p>
+  </div>
+  
+  <button class="back-to-top hidden" aria-label="Повернутися вгору">↑</button>
+</footer>
+<div class="modal-overlay hidden">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрити">&times;</button>
+      <img src="" alt="Збільшене зображення" class="modal-img">
     </div>
-  </footer>
+  </div>
 </body>
 </html>
