@@ -1,0 +1,7 @@
+[
+  { "id": "1", "title": "Основи HTML та CSS", "category": "frontend", "level": "Початківець", "price": 0, "description": "Базовий курс для тих, хто хоче навчитися верстати сайти з нуля.", "image": "https://picsum.photos/seed/html/400/250" },
+  { "id": "2", "title": "JavaScript для початківців", "category": "frontend", "level": "Початківець", "price": 1200, "description": "Вивчіть основи програмування та додайте інтерактивність на сайт.", "image": "https://picsum.photos/seed/js/400/250" },
+  { "id": "3", "title": "Просунутий React", "category": "frontend", "level": "Експерт", "price": 3500, "description": "Архітектура, хуки, Redux та створення складних SPA.", "image": "https://picsum.photos/seed/react/400/250" },
+  { "id": "4", "title": "UI/UX Дизайн у Figma", "category": "design", "level": "Початківець", "price": 2000, "description": "Створення зручних інтерфейсів та прототипування.", "image": "https://picsum.photos/seed/figma/400/250" },
+  { "id": "5", "title": "Основи Node.js", "category": "backend", "level": "Середній", "price": 2500, "description": "Створення серверної частини та REST API на JavaScript.", "image": "https://picsum.photos/seed/node/400/250" }
+]
