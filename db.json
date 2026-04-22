@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "2",
+      "title": "JavaScript для початківців",
+      "category": "frontend",
+      "level": "Початківець",
+      "price": 1200,
+      "description": "Вивчіть основи програмування та додайте інтерактивність на сайт.",
+      "image": "https://picsum.photos/seed/js/400/250"
+    },
+    {
+      "id": "3",
+      "title": "Просунутий React",
+      "category": "frontend",
+      "level": "Експерт",
+      "price": 3500,
+      "description": "Архітектура, хуки, Redux та створення складних SPA.",
+      "image": "https://picsum.photos/seed/react/400/250"
+    },
+    {
+      "id": "4",
+      "title": "Основи Node.js",
+      "category": "backend",
+      "level": "Середній",
+      "price": 2500,
+      "description": "Створення серверної частини та REST API на JavaScript.",
+      "image": "https://picsum.photos/seed/node/400/250"
+    },
+    {
+      "title": "Test",
+      "category": "backend",
+      "price": 10,
+      "image": "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
+      "description": "Test",
+      "id": "oDTYw64TpTw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
